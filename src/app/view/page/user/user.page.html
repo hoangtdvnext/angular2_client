@@ -1,0 +1,59 @@
+<div>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">{{btnModal}}</button>
+    <!--table list user-->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Username</th>
+            <th>Pasword</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of users; let idx = index">
+            <td>{{idx+1}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.password}}</td>
+            <td>{{item.email}}</td>
+            <td><a (click)="viewUser(item)" class="btn btn-primary">View</a> |
+                <a (click)="updateUser(item)" class="btn btn-info">Edit</a> |
+                <a (click)="deleteUser(idx,item)" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{title}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" [(ngModel)] = "user.username" [disabled]= "view">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" [(ngModel)] = "user.password" [disabled]= "view">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" [(ngModel)] = "user.email" [disabled] = "view">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" (click)="submitUser()" *ngIf="!view">{{btnSubmit}}</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

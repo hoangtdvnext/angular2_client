@@ -1,0 +1,16 @@
+{
+	"globalDependencies": {
+		"bootstrap-datepicker": "registry:dt/bootstrap-datepicker#0.0.0+20160812112642",
+		"core-js": "registry:dt/core-js#0.0.0+20160914114559",
+		"jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+		"jquery": "registry:dt/jquery#1.10.0+20160908203239",
+		"jquery.validation": "registry:dt/jquery.validation#1.13.1+20160626224847",
+		"moment": "registry:dt/moment#2.11.1+20160829143156",
+		"node": "registry:dt/node#6.0.0+20160915134512",
+		"slick-carousel": "registry:dt/slick-carousel#1.6.0+20161014140200",
+		"sweetalert": "registry:dt/sweetalert#1.1.3+20160317120654"
+	},
+	"dependencies": {
+		"bluebird": "registry:npm/bluebird#3.4.1+20160909132857"
+	}
+}

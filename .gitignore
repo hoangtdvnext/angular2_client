@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/angular-webpack.iml
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/workspace.xml
+dist/
+node_modules/
+typings/
+assets/
